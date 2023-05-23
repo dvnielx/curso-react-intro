@@ -13,6 +13,7 @@
     font-size: 18px;
     margin-right: 10px;
     color: rgba(84, 81, 81, 0.8);
+    cursor: pointer;
   }
   
   .todo-item-text {
@@ -29,6 +30,7 @@
   
 .icon-check-active {
   color: #66bb6a;
+  cursor: pointer;
 }
 
 .todo-item-completed{
