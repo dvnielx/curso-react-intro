@@ -1,0 +1,20 @@
+.create-todo-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior según tus necesidades */
+    right: 20px; /* Ajusta la distancia desde el lado derecho según tus necesidades */
+    width: 60px; /* Ajusta el ancho del botón según tus necesidades */
+    height: 60px; /* Ajusta la altura del botón según tus necesidades */
+    border-radius: 50%;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .create-todo-button svg {
+    color: #fff;
+    font-size: 20px; /* Ajusta el tamaño del icono según tus necesidades */
+  }
+  

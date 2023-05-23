@@ -5,13 +5,16 @@
 input {
     width: 14rem;
     height: 1.5rem;
-    border-radius: .5rem;
+    border-radius: 50px;
     
 }
 .todo-search-input {
     padding-right: 30px; /* Ajusta el padding a tu preferencia para dar espacio al icono */
     background-repeat: no-repeat;
     background-position: right center;
+    height: 2rem;
+    border: 1px solid #ccc; 
+    padding-left: 1rem;
   }
   
   .todo-search-icon {
