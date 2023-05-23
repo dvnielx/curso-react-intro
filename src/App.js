@@ -6,10 +6,14 @@ import { CreateToDoButton } from './CreateToDoButton';
 import React from 'react';
 
 const defaultToDos = [
-  {text: 'Meeting @ 5', completed: true},
-  {text: 'Watch course', completed: true},
-  {text: 'SQL course', completed: true},
-  {text: 'Meeting @ 9', completed: true}
+  {text: 'Meeting @ 5', completed: false},
+  {text: 'Watch course', completed: false},
+  {text: 'SQL course', completed: false},
+  {text: 'Meeting @ 9', completed: false},
+  {text: 'Run errands', completed: true},
+  {text: 'Interview', completed: true},
+  {text: 'Finish React.js course', completed: true},
+  {text: 'Install new MacOS', completed: true},
 ]
 
 function App() {
