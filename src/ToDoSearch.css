@@ -1,0 +1,24 @@
+#root {
+    text-align: center;
+}
+
+input {
+    width: 14rem;
+    height: 1.5rem;
+    border-radius: .5rem;
+    
+}
+.todo-search-input {
+    padding-right: 30px; /* Ajusta el padding a tu preferencia para dar espacio al icono */
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  
+  .todo-search-icon {
+    position: absolute;
+    top: 22%;
+    right: 13%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  

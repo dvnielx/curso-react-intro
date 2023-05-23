@@ -1,0 +1,27 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .todo-item-check {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #66bb6a;
+  }
+  
+  .todo-item-text {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .todo-item-delete {
+    font-size: 18px;
+    color: #e53935;
+    cursor: pointer;
+  }
+  
