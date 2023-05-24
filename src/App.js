@@ -17,26 +17,37 @@ import React from 'react';
 //   {text: 'Learn states and hooks', completed: true},
 // ]
 
-// localStorage.setItem('ToDos_v1', JSON.stringify(defaultToDos))
-// localStorage.removeItem('ToDos_v1')
+// localStorage.setItem(itemName, JSON.stringify(defaultToDos))
+// localStorage.removeItem(itemName)
+
+function useLocalStorage (itemName, initialValue) { //custom hook
+  const localStorageItem = localStorage.getItem
+  (itemName); 
+  
+  let parsedItem;
+  
+  if (!localStorageItem) { 
+    localStorage.setItem(itemName, JSON.
+      stringify(initialValue));
+      parsedItem = initialValue;
+    } else {
+      parsedItem = JSON.parse(localStorageItem);
+    }
+    
+    const [item, setItem] = React.useState(parsedItem);
+
+    const saveItem = (newItem) => {
+      localStorage.setItem(itemName, JSON.
+      stringify(newItem));
+      setItem(newItem);
+    }
+    return [item, saveItem]
+}
 
 function App() {
 
-  const localStorageToDos = localStorage.getItem
-  ('ToDos_v1'); 
-
-  let parsedToDos;
-
-    if (!localStorageToDos) {
-      localStorage.setItem('ToDos_v1', JSON.
-      stringify([]));
-      parsedToDos = [];
-    } else {
-      parsedToDos = JSON.parse(localStorageToDos);
-    }
-
-  const [ToDos, setToDos] = React.useState
-  (parsedToDos)
+  const [ToDos, saveToDos] = useLocalStorage
+  ('ToDos_v1', []);
 
   const [searchValue, setSearchValue] = React.
   useState('');
@@ -49,12 +60,6 @@ function App() {
      return ToDo.text.toLowerCase().includes(searchValue)
     }
   );
-
-    const saveToDos = (newToDos) => {
-      localStorage.setItem('ToDos_v1', JSON.
-      stringify(newToDos));
-      setToDos(newToDos);
-    }
 
   const completeToDo = (text) => {
     const newToDos = [...ToDos];
