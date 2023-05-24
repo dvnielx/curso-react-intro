@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%; 
     height: 10%; 
-    background-color: #202C59;
+    background-color: #243E56;
     border: none;
     cursor: pointer;
     display: flex;
@@ -13,7 +13,12 @@
   
   .create-todo-button svg {
     color: #fff;
-    font-size: 2rem; 
+    font-size: 2rem;
     cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .create-todo-button svg:hover {
+    transform: rotate(360deg);
   }
   

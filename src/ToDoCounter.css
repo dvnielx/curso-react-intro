@@ -3,8 +3,9 @@ h1 {
     text-align: center;
     margin: 0;
     padding: 48px;
+    color: #475A5C;
 }
 
 .To-Do-Counter span {
-    color:#2B3C78;
+    color:#0DE7A6;
 }

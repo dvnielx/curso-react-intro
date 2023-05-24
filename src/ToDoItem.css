@@ -11,6 +11,7 @@
 }
 
 .todo-item-text {
+  color: #596475;
   flex-grow: 1;
   margin: 0;
   font-size: 1.3rem;
