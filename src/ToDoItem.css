@@ -7,61 +7,25 @@
   margin-bottom: 1rem;
   margin-right: 15%;
   height: 2rem;
-
-}
-
-.todo-item-check {
-  font-size: 1.3rem;
-  margin-right: 10px;
-  color: rgba(84, 81, 81, 0.8);
-  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ajusta los valores según tus necesidades */
 }
 
 .todo-item-text {
   flex-grow: 1;
   margin: 0;
   font-size: 1.3rem;
-}
-
-.todo-item-delete {
-  font-size: 1.2rem;
-  color: #e53935;
   cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: filter 0.3s ease;
 }
 
-.todo-item-delete:hover {
-  transform: scale(1.2);
-  opacity: 0.7;
-}
-
-
-.icon-check-active {
-  color: #66bb6a;
-  cursor: pointer;
-  animation-name: spin;
-  animation-duration: 0.2s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(180deg) scale(1.2);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
+.todo-item-text:focus {
+  filter: blur(2px);
 }
 
 .todo-item-completed {
   text-decoration: line-through;
   text-decoration-thickness: 1px;
-}
+} 
 
 ul {
   display: block;

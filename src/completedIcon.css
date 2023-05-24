@@ -1,0 +1,31 @@
+.todo-item-check {
+    font-size: 1.3rem;
+    margin-right: 10px;
+    color: rgba(84, 81, 81, 0.8);
+    cursor: pointer;
+  }
+
+  .icon-check-active {
+    color: #66bb6a;
+    cursor: pointer;
+    animation-name: spin;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.2);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  
+  
+  

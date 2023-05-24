@@ -2,6 +2,8 @@ import React from 'react';
 import './ToDoItem.css';
 import { CompleteIcon } from './CompleteIcon.js';
 import { DeleteIcon } from './DeleteIcon.js';
+import './completedIcon.css';
+import './deleteIcon.css';
 
 function ToDoItem(props) {
   return (

@@ -1,0 +1,11 @@
+.todo-item-delete {
+    font-size: 1.2rem;
+    color: #9DACB2;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .todo-item-delete:hover {
+    color: #e53935;
+  }
+  
