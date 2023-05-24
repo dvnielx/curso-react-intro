@@ -1,8 +1,9 @@
-import { ToDoCounter } from './ToDoCounter';
-import { ToDoSearch } from './ToDoSearch';
-import { ToDoList } from './ToDoList';
-import { ToDoItem } from './ToDoItem';
-import { CreateToDoButton } from './CreateToDoButton';
+import { ToDoCounter } from '../ToDoCounter/index.js';
+import { ToDoSearch } from '../ToDoSearch'
+import { ToDoList } from '../ToDoList';
+import { ToDoItem } from '../ToDoItem';
+import { CreateToDoButton } from '../CreateToDoButton/index.js';
+import { useLocalStorage } from './useLocalStorage.js';
 import React from 'react';
 
 // const defaultToDos = [
@@ -20,37 +21,12 @@ import React from 'react';
 // localStorage.setItem(itemName, JSON.stringify(defaultToDos))
 // localStorage.removeItem(itemName)
 
-function useLocalStorage (itemName, initialValue) { //custom hook
-  const localStorageItem = localStorage.getItem
-  (itemName); 
-  
-  let parsedItem;
-  
-  if (!localStorageItem) { 
-    localStorage.setItem(itemName, JSON.
-      stringify(initialValue));
-      parsedItem = initialValue;
-    } else {
-      parsedItem = JSON.parse(localStorageItem);
-    }
-    
-    const [item, setItem] = React.useState(parsedItem);
-
-    const saveItem = (newItem) => {
-      localStorage.setItem(itemName, JSON.
-      stringify(newItem));
-      setItem(newItem);
-    }
-    return [item, saveItem]
-}
 
 function App() {
-
   const [ToDos, saveToDos] = useLocalStorage
   ('ToDos_v1', []);
 
-  const [searchValue, setSearchValue] = React.
-  useState('');
+  const [searchValue, setSearchValue] = React.useState('');
 
   const completedToDos = ToDos.filter(ToDo => !!ToDo.completed).length;
   const totalToDos = ToDos.length;
@@ -64,7 +40,7 @@ function App() {
   const completeToDo = (text) => {
     const newToDos = [...ToDos];
     const toDoIndex = newToDos.findIndex(
-      (ToDo) => ToDo.text == text
+      (ToDo) => ToDo.text === text
     );
     newToDos[toDoIndex].completed = true;
     saveToDos(newToDos)
@@ -73,7 +49,7 @@ function App() {
   const deleteToDo = (text) => {
     const newToDos = [...ToDos];
     const toDoIndex = newToDos.findIndex(
-      (ToDo) => ToDo.text == text
+      (ToDo) => ToDo.text === text
     );
     newToDos.splice(toDoIndex, 1)
     saveToDos(newToDos)
