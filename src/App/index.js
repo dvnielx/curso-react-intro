@@ -1,10 +1,7 @@
-import { ToDoCounter } from '../ToDoCounter/index.js';
-import { ToDoSearch } from '../ToDoSearch'
-import { ToDoList } from '../ToDoList';
-import { ToDoItem } from '../ToDoItem';
-import { CreateToDoButton } from '../CreateToDoButton/index.js';
+
 import { useLocalStorage } from './useLocalStorage.js';
 import React from 'react';
+import { AppUI } from './AppUI'
 
 // const defaultToDos = [
 //   {text: 'Meeting @ 5', completed: false},
@@ -54,34 +51,20 @@ function App() {
     newToDos.splice(toDoIndex, 1)
     saveToDos(newToDos)
   };
-
+   
+    
   return (
-    <React.Fragment>
-
-      <ToDoCounter 
-      completed={completedToDos} 
-      total={totalToDos} />
-
-      <ToDoSearch
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}/>
-
-      <ToDoList>
-        {searchedToDos.map(ToDo => (
-          <ToDoItem 
-          key={ToDo.text} 
-          text={ToDo.text}
-          completed={ToDo.completed}
-          onComplete={() => completeToDo(ToDo.text)}
-          onDelete={() => deleteToDo(ToDo.text)}
-          />
-        ))}
-      </ToDoList>
-
-      <CreateToDoButton/>
-
-    </React.Fragment>
+    <AppUI 
+    completedToDos={completedToDos}
+    totalToDos={totalToDos}
+    searchedToDos={searchedToDos}
+    completeToDo={completeToDo}
+    deleteToDo={deleteToDo}
+    searchValue={searchValue}
+    setSearchValue={setSearchValue}
+    />
   );
+
 }
 
 
