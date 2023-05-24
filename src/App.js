@@ -5,21 +5,39 @@ import { ToDoItem } from './ToDoItem';
 import { CreateToDoButton } from './CreateToDoButton';
 import React from 'react';
 
-const defaultToDos = [
-  {text: 'Meeting @ 5', completed: false},
-  {text: 'Watch course', completed: false},
-  {text: 'SQL course', completed: false},
-  {text: 'Meeting @ 9', completed: false},
-  {text: 'Run errands', completed: true},
-  {text: 'Interview', completed: true},
-  {text: 'Finish React.js course', completed: true},
-  {text: 'Install new MacOS', completed: true},
-  {text: 'Learn states and hooks', completed: true},
-]
+// const defaultToDos = [
+//   {text: 'Meeting @ 5', completed: false},
+//   {text: 'Watch course', completed: false},
+//   {text: 'SQL course', completed: false},
+//   {text: 'Meeting @ 9', completed: false},
+//   {text: 'Run errands', completed: true},
+//   {text: 'Interview', completed: true},
+//   {text: 'Finish React.js course', completed: true},
+//   {text: 'Install new MacOS', completed: true},
+//   {text: 'Learn states and hooks', completed: true},
+// ]
+
+// localStorage.setItem('ToDos_v1', JSON.stringify(defaultToDos))
+// localStorage.removeItem('ToDos_v1')
 
 function App() {
+
+  const localStorageToDos = localStorage.getItem
+  ('ToDos_v1'); 
+
+  let parsedToDos;
+
+    if (!localStorageToDos) {
+      localStorage.setItem('ToDos_v1', JSON.
+      stringify([]));
+      parsedToDos = [];
+    } else {
+      parsedToDos = JSON.parse(localStorageToDos);
+    }
+
   const [ToDos, setToDos] = React.useState
-  (defaultToDos)
+  (parsedToDos)
+
   const [searchValue, setSearchValue] = React.
   useState('');
 
@@ -32,7 +50,11 @@ function App() {
     }
   );
 
-  console.log('You searched ' + searchValue)
+    const saveToDos = (newToDos) => {
+      localStorage.setItem('ToDos_v1', JSON.
+      stringify(newToDos));
+      setToDos(newToDos);
+    }
 
   const completeToDo = (text) => {
     const newToDos = [...ToDos];
@@ -40,7 +62,7 @@ function App() {
       (ToDo) => ToDo.text == text
     );
     newToDos[toDoIndex].completed = true;
-    setToDos(newToDos)
+    saveToDos(newToDos)
   };
 
   const deleteToDo = (text) => {
@@ -49,7 +71,7 @@ function App() {
       (ToDo) => ToDo.text == text
     );
     newToDos.splice(toDoIndex, 1)
-    setToDos(newToDos)
+    saveToDos(newToDos)
   };
 
   return (
