@@ -12,6 +12,7 @@ input {
     height: 2rem;
     border: 1px solid #ccc; 
     padding-left: 1rem;
+    width: 60%;
 
   }
   .todo-search-input:focus{
@@ -19,11 +20,11 @@ input {
   }
 
   .todo-search-icon {
-    position: absolute;
     top: 22%;
     right: 13%;
     transform: translateY(-50%);
     cursor: pointer;
+    position: sticky;
   }
   
   
