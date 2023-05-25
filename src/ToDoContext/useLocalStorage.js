@@ -41,3 +41,19 @@ function useLocalStorage(itemName, initialValue) { //custom hook
 }
 
 export { useLocalStorage };
+
+
+// localStorage.removeItem('ToDos_v1')
+// const defaultToDos = [
+//   {text: 'Meeting @ 5', completed: false},
+//   {text: 'Watch course', completed: false},
+//   {text: 'SQL course', completed: false},
+//   {text: 'Meeting @ 9', completed: false},
+//   {text: 'Run errands', completed: true},
+//   {text: 'Interview', completed: true},
+//   {text: 'Finish React.js course', completed: true},
+//   {text: 'Install new MacOS', completed: true},
+//   {text: 'Learn states and hooks', completed: true},
+// ]
+
+// localStorage.setItem('ToDos_v1' JSON.stringify(defaultToDos))
