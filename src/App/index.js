@@ -3,6 +3,7 @@ import { useLocalStorage } from './useLocalStorage.js';
 import React from 'react';
 import { AppUI } from './AppUI'
 
+// localStorage.removeItem('ToDos_v1')
 // const defaultToDos = [
 //   {text: 'Meeting @ 5', completed: false},
 //   {text: 'Watch course', completed: false},
@@ -15,18 +16,31 @@ import { AppUI } from './AppUI'
 //   {text: 'Learn states and hooks', completed: true},
 // ]
 
-// localStorage.setItem(itemName, JSON.stringify(defaultToDos))
-// localStorage.removeItem(itemName)
+// localStorage.setItem('ToDos_v1' JSON.stringify(defaultToDos))
+
 
 
 function App() {
-  const [ToDos, saveToDos] = useLocalStorage
+  const {
+    item: ToDos, 
+    saveItem: saveToDos,
+    loading,
+    error}
+     = useLocalStorage
   ('ToDos_v1', []);
 
   const [searchValue, setSearchValue] = React.useState('');
 
   const completedToDos = ToDos.filter(ToDo => !!ToDo.completed).length;
   const totalToDos = ToDos.length;
+
+  console.log('log 1')
+ 
+  React.useEffect(() => {
+    console.log('log 2')
+  })
+
+  console.log('log 3')
 
   const searchedToDos = ToDos.filter( //estado derivado
     (ToDo) => {
@@ -55,6 +69,8 @@ function App() {
     
   return (
     <AppUI 
+    loading={loading}
+    error={error}
     completedToDos={completedToDos}
     totalToDos={totalToDos}
     searchedToDos={searchedToDos}
