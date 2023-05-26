@@ -21,7 +21,7 @@ input {
 
   .todo-search-icon {
     top: 22%;
-    right: 13%;
+    right: 20%;
     transform: translateY(-50%);
     cursor: pointer;
     position: sticky;

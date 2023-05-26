@@ -18,9 +18,20 @@ function ToDoProvider({children}) {
 
     const searchedToDos = ToDos.filter( //estado derivado
         (ToDo) => {
-            return ToDo.text.toLowerCase().includes(searchValue)
+            const ToDoText = ToDo.text.toLowerCase();
+            const searchText = searchValue.toLowerCase();
+            return ToDoText.includes(searchText);
         }
     );
+
+    const addToDo = (text) => {
+        const newToDos = [...ToDos];
+        newToDos.push({
+            text,
+            completed: false,
+        })
+        saveToDos(newToDos)
+    }
  
     const completeToDo = (text) => {
         const newToDos = [...ToDos];
@@ -52,7 +63,8 @@ function ToDoProvider({children}) {
         searchValue,
         setSearchValue,
         openModal,
-        setOpenModal
+        setOpenModal,
+        addToDo,
     }}>
         {children}
     </ToDoContext.Provider>
