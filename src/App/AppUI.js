@@ -49,11 +49,11 @@ function AppUI() {
         ))}
       </ToDoList>
 
-      <CreateToDoButton />
+      <CreateToDoButton 
+      setOpenModal={setOpenModal}/>
 
       {openModal && (
         <Modal>
-          {/* Contenido del modal */}
           <p className="create-to-do" >Create a To-Do!</p>
           <button className="close-modal" onClick={closeModal}>Close</button>
         </Modal>

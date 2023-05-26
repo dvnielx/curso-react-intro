@@ -4,18 +4,23 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { ToDoContext } from '../ToDoContext';
 import './CreateToDoButton.css';
 
-function CreateToDoButton() {
-const {openModal, setOpenModal} = React.useContext(ToDoContext);
+function CreateToDoButton({setOpenModal}) {
+// const {openModal, setOpenModal} = React.useContext(ToDoContext);
     
-const toggleModal = () => {
-  console.log('Clic en el botón');
-  setOpenModal(!openModal);
-};
-      
+// const toggleModal = () => {
+//   console.log('Clic en el botón');
+//   setOpenModal(!openModal);
+ 
   return (
-    <button className="create-todo-button" onClick={toggleModal} >
+    
+    <button className="create-todo-button" onClick={
+      () => {
+        setOpenModal(state => !state)
+      }
+    } >
       <FontAwesomeIcon icon={faPlus}  />
     </button>
   );
 }
+
 export { CreateToDoButton }
