@@ -7,41 +7,58 @@ import { LoadingToDos } from '../LoadingToDos/index';
 import { ToDosError } from '../ToDosError';
 import { NoToDos } from '../NoToDos/NoToDos';
 import { CreateToDoButton } from "../CreateToDoButton/index.js";
+import { Modal } from '../Modal';
+import '../Modal/Modal.css';
 import { ToDoContext } from '../ToDoContext';
 
+
 function AppUI() {
+
+  const {
+    loading,
+    error,
+    searchedToDos,
+    completeToDo,
+    deleteToDo,
+    openModal,
+    setOpenModal
+  } = React.useContext(ToDoContext);
+
+  const closeModal = () => {
+    setOpenModal(false);
+  };
+
   return (
     <React.Fragment>
       <ToDoCounter />
       <ToDoSearch />
-      
-      <ToDoContext.Consumer> 
-       {({
-         loading,
-         error,
-         searchedToDos,
-         completeToDo,
-         deleteToDo,
-       }) => (
-         <ToDoList>
-          {loading && <LoadingToDos />}
-          {error && <ToDosError />}
-          {(!loading && searchedToDos.length === 0) && <NoToDos/>}
 
-          {searchedToDos.map((ToDo) => (
-            <ToDoItem
-              key={ToDo.text}
-              text={ToDo.text}
-              completed={ToDo.completed}
-              onComplete={() => completeToDo(ToDo.text)}
-              onDelete={() => deleteToDo(ToDo.text)}
-            />
-          ))}
-       </ToDoList>
-       )}
-      </ToDoContext.Consumer>
+      <ToDoList>
+        {loading && <LoadingToDos />}
+        {error && <ToDosError />}
+        {(!loading && searchedToDos.length === 0) && <NoToDos />}
+
+        {searchedToDos.map((ToDo) => (
+          <ToDoItem
+            key={ToDo.text}
+            text={ToDo.text}
+            completed={ToDo.completed}
+            onComplete={() => completeToDo(ToDo.text)}
+            onDelete={() => deleteToDo(ToDo.text)}
+          />
+        ))}
+      </ToDoList>
 
       <CreateToDoButton />
+
+      {openModal && (
+        <Modal>
+          {/* Contenido del modal */}
+          <p className="create-to-do" >Create a To-Do!</p>
+          <button className="close-modal" onClick={closeModal}>Close</button>
+        </Modal>
+      )}
+
     </React.Fragment>
   );
 }

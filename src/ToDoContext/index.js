@@ -2,9 +2,7 @@ import React from 'react';
 import { useLocalStorage } from './useLocalStorage';
 
 const ToDoContext = React.createContext();
-
 function ToDoProvider({children}) {
-
     const {
         item: ToDos,
         saveItem: saveToDos,
@@ -13,6 +11,7 @@ function ToDoProvider({children}) {
         = useLocalStorage('ToDos_v1', []);
 
     const [searchValue, setSearchValue] = React.useState('');
+    const [openModal, setOpenModal] = React.useState(false);
 
     const completedToDos = ToDos.filter(ToDo => !!ToDo.completed).length;
     const totalToDos = ToDos.length;
@@ -51,7 +50,9 @@ function ToDoProvider({children}) {
         completeToDo,
         deleteToDo,
         searchValue,
-        setSearchValue
+        setSearchValue,
+        openModal,
+        setOpenModal
     }}>
         {children}
     </ToDoContext.Provider>
