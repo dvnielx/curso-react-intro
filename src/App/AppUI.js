@@ -7,9 +7,11 @@ import { LoadingToDos } from '../LoadingToDos/index';
 import { ToDosError } from '../ToDosError';
 import { NoToDos } from '../NoToDos/NoToDos';
 import { CreateToDoButton } from "../CreateToDoButton/index.js";
+import { ToDoContext } from '../ToDoContext';
+import { ToDoForm } from "../ToDoForm/index.js";
 import { Modal } from '../Modal';
 import '../Modal/Modal.css';
-import { ToDoContext } from '../ToDoContext';
+
 
 
 function AppUI() {
@@ -54,8 +56,7 @@ function AppUI() {
 
       {openModal && (
         <Modal>
-          <p className="create-to-do" >Create a To-Do!</p>
-          <button className="close-modal" onClick={closeModal}>Close</button>
+          <ToDoForm />
         </Modal>
       )}
 
