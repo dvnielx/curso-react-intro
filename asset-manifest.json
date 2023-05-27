@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/to-do-machine-react/static/css/main.99145f14.css",
+    "main.js": "/to-do-machine-react/static/js/main.fc788068.js",
+    "index.html": "/to-do-machine-react/index.html",
+    "main.99145f14.css.map": "/to-do-machine-react/static/css/main.99145f14.css.map",
+    "main.fc788068.js.map": "/to-do-machine-react/static/js/main.fc788068.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.99145f14.css",
+    "static/js/main.fc788068.js"
+  ]
+}
