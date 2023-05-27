@@ -21,7 +21,7 @@ This project was created as part of the React course from Platzi. It serves as a
 
 
 
-<img src="./src/images/to-do-machine-1.jpeg" alt="To-Do Machine" style="max-width: 200px">
+<img src="./src/images/to-do-machine-1.jpeg" alt="To-Do Machine" width="200">
 
 <img src="./src/images/to-do-machine.jpeg" alt="To-Do Machine" width="200">
 
