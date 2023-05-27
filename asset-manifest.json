@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/to-do-machine-react/static/css/main.5200bdc9.css",
+    "main.css": "/to-do-machine-react/static/css/main.07641154.css",
     "main.js": "/to-do-machine-react/static/js/main.fc788068.js",
     "index.html": "/to-do-machine-react/index.html",
-    "main.5200bdc9.css.map": "/to-do-machine-react/static/css/main.5200bdc9.css.map",
+    "main.07641154.css.map": "/to-do-machine-react/static/css/main.07641154.css.map",
     "main.fc788068.js.map": "/to-do-machine-react/static/js/main.fc788068.js.map"
   },
   "entrypoints": [
-    "static/css/main.5200bdc9.css",
+    "static/css/main.07641154.css",
     "static/js/main.fc788068.js"
   ]
 }
