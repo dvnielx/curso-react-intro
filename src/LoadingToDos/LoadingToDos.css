@@ -4,12 +4,14 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-family: Arial, sans-serif;
+    font-family: 'Raleway', sans-serif;  
   }
   
   .loading-text {
-    font-size: 24px;
-    margin-bottom: 16px;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-family: 'Raleway', sans-serif; 
+    color: #596475 
   }
   
   .loading-spinner {
@@ -19,6 +21,7 @@
     border: 4px solid #0DE7A6;
     border-top-color: transparent;
     animation: spin 1s linear infinite;
+    margin-bottom: 30rem;
   }
   
   @keyframes spin {

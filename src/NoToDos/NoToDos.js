@@ -2,7 +2,7 @@ import React from 'react';
 
 function NoToDos() {
   return (
-    <p>Create a To-Do!</p>
+    <p className='p-create-to-do'> Your To-Do list is empty, create one!</p>
   )
 }
 

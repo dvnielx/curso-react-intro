@@ -37,3 +37,21 @@ ul {
 
 }
 
+.p-create-to-do {
+  color: #243E56;
+  font-size: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0px;
+  margin: 20% auto;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+  width: 40%;
+}
+
+.p-create-to-do:hover {
+  transform: scale(1.05);
+  color: #ffffff;
+  background-color: #243E56;
+}
