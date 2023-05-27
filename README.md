@@ -21,11 +21,12 @@ This project was created as part of the React course from Platzi. It serves as a
 
 
 
-![To-Do Machine](./src/images/to-do-machine-1.jpeg)
+<img src="./src/images/to-do-machine-1.jpeg" alt="To-Do Machine" style="max-width: 150px;">
 
-![To-Do Machine](./src/images/to-do-machine.jpeg)
+<img src="./src/images/to-do-machine.jpeg" alt="To-Do Machine" width="150">
 
-![To-Do Machine](./src/images/to-do-machine2.jpeg)
+<img src="./src/images/to-do-machine2.jpeg" alt="To-Do Machine" width="150">
+
 
 
 ## Deployment 💻
