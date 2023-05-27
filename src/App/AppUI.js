@@ -26,10 +26,6 @@ function AppUI() {
     setOpenModal
   } = React.useContext(ToDoContext);
 
-  const closeModal = () => {
-    setOpenModal(false);
-  };
-
   return (
     <React.Fragment>
       <ToDoCounter />

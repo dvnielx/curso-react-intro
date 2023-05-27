@@ -1,7 +1,7 @@
 import React from 'react'
 import { ToDoContext } from '../ToDoContext';
 import './ToDoCounter.css';
-
+// eslint-disable-next-line
 function ToDoCounter ({}) {
     const {  
         completedToDos,
