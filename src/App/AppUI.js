@@ -10,8 +10,6 @@ import { CreateToDoButton } from "../CreateToDoButton/index.js";
 import { ToDoContext } from '../ToDoContext';
 import { ToDoForm } from "../ToDoForm/index.js";
 import { Modal } from '../Modal';
-import '../Modal/Modal.css';
-
 
 
 function AppUI() {

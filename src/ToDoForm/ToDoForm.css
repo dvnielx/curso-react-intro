@@ -1,9 +1,14 @@
+.Modal {
+    justify-content: center;
+    align-items: center;
+}
+
 .Modal-form {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 65%;
+    width: 15rem;
     padding: 20px;
     border-radius: 10px;
     background-color: rgba(245, 245, 245, 0.9); /* Ajusta la opacidad según lo deseado */
@@ -30,7 +35,7 @@
     background-color: #F4F6F8;
     color: #243E56;
     font-family: 'Raleway', sans-serif;
-    margin-top: 1rem;
+    margin-top: .5rem;
 }
 
 .close-button-container {
@@ -40,7 +45,7 @@
 
 .modal-close-button {
     position: absolute;
-    top: -180px;
+    top: -170px;
     right: -10px;
     width: 20px;
     height: 20px;
