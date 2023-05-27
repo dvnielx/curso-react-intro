@@ -2,12 +2,6 @@
 
 Welcome to To-Do Machine, a simple and user-friendly application that helps you manage your tasks efficiently. With To-Do Machine, you can create, track, mark as done, and delete tasks effortlessly.
 
-![To-Do Machine](./src/images/to-do-machine-1.jpeg)
-
-![To-Do Machine](./src/images/to-do-machine.jpeg)
-
-![To-Do Machine](./src/images/to-do-machine2.jpeg)
-
 This project was created as part of the React course from Platzi. It serves as a practical implementation of the concepts and techniques learned throughout the course.
 
 ## Features
@@ -24,6 +18,15 @@ This project was created as part of the React course from Platzi. It serves as a
 - HTML5: Markup language for structuring the application.
 - CSS3: Styling language for designing the user interface.
 - JavaScript: Programming language for implementing application logic.
+
+
+
+![To-Do Machine](./src/images/to-do-machine-1.jpeg)
+
+![To-Do Machine](./src/images/to-do-machine.jpeg)
+
+![To-Do Machine](./src/images/to-do-machine2.jpeg)
+
 
 ## Deployment 💻
 
